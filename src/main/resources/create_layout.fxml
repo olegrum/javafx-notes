@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="100.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="notes.controllers.CreateController">
+    <children>
+        <TextField fx:id="text" layoutX="167.0" layoutY="30.0" onKeyTyped="#limitText" prefHeight="25.0"
+                   prefWidth="219.0"/>
+        <Label layoutX="61.0" layoutY="6.0" text="Date/Time"/>
+        <Label layoutX="223.0" layoutY="6.0" text="Text (100 character limit)"/>
+        <TextField fx:id="date_time" disable="true" layoutX="14.0" layoutY="30.0"/>
+        <Button defaultButton="true" layoutX="14.0" layoutY="61.0" mnemonicParsing="false"
+                onAction="#handleCreateNoteButton" prefHeight="25.0" prefWidth="100.0" text="Create"/>
+        <Button cancelButton="true" layoutX="288.0" layoutY="61.0" mnemonicParsing="false"
+                onAction="#handleCancelButton" prefWidth="100.0" text="Cancel"/>
+        <CheckBox fx:id="dateCheck" layoutX="117.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleDateCheck"
+                  selected="true" text="Create with current time"/>
+    </children>
+</AnchorPane>

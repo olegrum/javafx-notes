@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" hgap="5.0" prefHeight="600.0" prefWidth="800.0" vgap="5.0"
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="notes.controllers.MainController">
+    <children>
+        <TableView fx:id="table" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS"
+                   GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="dtcol" prefWidth="150.0" text="Date/Time"/>
+                <TableColumn fx:id="textcol" prefWidth="650.0" text="Text"/>
+            </columns>
+            <GridPane.margin>
+                <Insets/>
+            </GridPane.margin>
+        </TableView>
+        <Button mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="82.0" prefWidth="84.0" text="Create"
+                GridPane.halignment="LEFT" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="82.0" prefWidth="84.0" text="Delete"
+                GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1"/>
+        <ProgressIndicator fx:id="PI" maxWidth="30.0" visible="false" GridPane.columnIndex="2"
+                           GridPane.halignment="RIGHT" GridPane.rowIndex="1"/>
+    </children>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+        <RowConstraints minHeight="0.0" prefHeight="0.0"/>
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+</GridPane>
